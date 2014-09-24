@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <script data-require="jquery@1.11.0" data-semver="1.11.0" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script data-require="mustache.js@0.7.2" data-semver="0.7.2" src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <h3>light box demo</h3>
+    <div>Es gibt im Moment in diese Mannschaft, oh, einige       <a href="#" id="first-lb" class="light-box">Spieler</a>
+ vergessen ihnen Profi was sie sind. Ich lese nicht sehr viele Zeitungen, aber ich habe gehört viele <a href="#" id="second-lb" class="light-box">Situationen</a>. Erstens: wir haben nicht offensiv gespielt.</div>
+    <script>
+       $(document).ready(function(){
+         
+         var template = "this is the content of the lightbox. Later full html support.";
+         $('#first-lb').lightbox({content: template, header: 'dialog'});
+         
+         
+         $('#second-lb').lightbox({content: 'dummy', header:'dialog'});
+         
+       });
+       
+     </script>
+  </body>
+
+</html>
